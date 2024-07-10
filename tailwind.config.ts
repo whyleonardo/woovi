@@ -83,7 +83,8 @@ const config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
-        cal: ["var(--font-cal-sans)"]
+        cal: ["var(--font-cal-sans)"],
+        nunito: ["var(--font-nunito)"]
       },
       keyframes: {
         "accordion-down": {

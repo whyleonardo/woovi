@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/config"
 
 import { cn } from "@/lib/utils"
 
-import { fontCalSans, fontMono, fontSans } from "@/styles/fonts"
+import { fontCalSans, fontMono, fontNunito, fontSans } from "@/styles/fonts"
 import "@/styles/global.css"
 
 import { ThemeProvider } from "@/providers/theme-provider"
@@ -34,7 +34,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html suppressHydrationWarning>
       <head />
-      <body className={cn("min-h-screen", fontSans, fontMono, fontCalSans)}>
+      <body
+        className={cn(
+          "min-h-screen",
+          fontSans,
+          fontMono,
+          fontCalSans,
+          fontNunito
+        )}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>

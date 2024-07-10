@@ -1,3 +1,4 @@
+import { Nunito } from "next/font/google"
 import localFont from "next/font/local"
 
 import { GeistMono } from "geist/font/mono"
@@ -8,6 +9,11 @@ const calSans = localFont({
   variable: "--font-cal-sans"
 })
 
+const nunito = Nunito({
+  variable: "--font-nunito"
+})
+
 export const fontCalSans = calSans.variable
 export const fontSans = GeistSans.variable
 export const fontMono = GeistMono.variable
+export const fontNunito = nunito.variable
