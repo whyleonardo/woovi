@@ -1,0 +1,7 @@
+bun.lockb
+.prettierignore
+.gitignore
+.husky
+.next
+test-results
+test-coverage-results
