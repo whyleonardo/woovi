@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`
+  },
+  icons: {
+    icon: "/favicon.ico"
   }
 }
 
@@ -33,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html suppressHydrationWarning>
       <head />
-      <body className={cn("min-h-screen", fontNunito)}>
+      <body className={cn("bg-dot-woovi-green-900/5 min-h-screen", fontNunito)}>
         {children}
         <ScreenSizeIndicator />
         <Toaster />
