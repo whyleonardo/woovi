@@ -10,6 +10,7 @@ const calSans = localFont({
 })
 
 const nunito = Nunito({
+  subsets: ["latin"],
   variable: "--font-nunito"
 })
 
