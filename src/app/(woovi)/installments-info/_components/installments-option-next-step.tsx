@@ -24,7 +24,7 @@ export const InstallmentsOptionNextStep = () => {
       className={buttonVariants({
         variant: "woovi",
         size: "woovi",
-        className: "mt-4 w-full"
+        className: "mt-4 w-full md:max-w-lg"
       })}
     >
       Ir para o pagamento

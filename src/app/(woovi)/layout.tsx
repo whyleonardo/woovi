@@ -12,12 +12,12 @@ interface WooviLayoutProps {
 export default function WooviLayout({ children }: WooviLayoutProps) {
   return (
     <SplashScreenProvider>
-      <div className="flex flex-col items-center gap-8 p-4">
+      <div className="flex flex-col items-center gap-8 px-4 py-8">
         <header>
           <Logo.Colored className="h-9 w-28" />
         </header>
 
-        {children}
+        <main className="w-full lg:mx-auto lg:max-w-[1440px]">{children}</main>
 
         <footer>
           <div className="flex items-center text-woovi-muted-gray">

@@ -17,7 +17,7 @@ export const CopyQRCodeButton = () => {
       }}
       variant="woovi"
       size="woovi"
-      className="mb-4 mt-8"
+      className="mb-4 mt-8 lg:mb-0 lg:mt-0 lg:w-full"
     >
       Clique para copiar o QR CODE
       <Icons.copy className="ml-2 h-5 w-5" />

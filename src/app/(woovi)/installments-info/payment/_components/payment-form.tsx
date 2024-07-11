@@ -112,7 +112,9 @@ export const PaymentForm = ({ className }: PaymentFormProps) => {
       description: "Obrigado por escolher a Woovi!"
     })
 
-    router.push("/")
+    setTimeout(() => {
+      router.push("/")
+    }, 700)
   }
 
   return (

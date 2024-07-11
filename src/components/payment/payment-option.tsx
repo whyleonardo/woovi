@@ -44,7 +44,7 @@ export const PaymentOption = ({
   return (
     <label
       className={cn(
-        "relative z-50 flex min-h-24 items-center bg-white p-4",
+        "relative z-50 flex min-h-24 cursor-pointer items-center bg-white p-4 lg:max-w-96 lg:rounded-md",
         "first-of-type:rounded-t-md last-of-type:rounded-b-md",
         "has-[button[data-state='checked']]:bg-woovi-green-foreground",
         "has-[button[data-state='checked']]:ring-woovi-green",

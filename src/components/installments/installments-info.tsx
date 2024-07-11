@@ -82,10 +82,10 @@ export const InstallmentsInfo = () => {
 
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="text-base font-extrabold text-woovi-dark-gray !no-underline">
+          <AccordionTrigger className="w-full text-base font-extrabold text-woovi-dark-gray !no-underline sm:max-w-full">
             Como funciona?
           </AccordionTrigger>
-          <AccordionContent className="text-start font-semibold text-woovi-dark-gray">
+          <AccordionContent className="w-full text-start font-semibold text-woovi-dark-gray sm:max-w-full lg:max-w-full">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
             dolor saepe architecto provident. Iste alias animi repellendus ut
             unde, incidunt officia voluptates quos amet quisquam architecto

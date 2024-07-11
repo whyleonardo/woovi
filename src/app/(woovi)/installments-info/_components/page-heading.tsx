@@ -12,7 +12,7 @@ export const PageHeading = () => {
 
   if (paymentType === "pix") {
     return (
-      <strong className="text-balanc block text-2xl font-extrabold text-woovi-dark-gray">
+      <strong className="block text-balance text-2xl font-extrabold text-woovi-dark-gray">
         {mockedData.username}, pague{" "}
         {formatCurrency(paymentMethodStore?.paymentMethod?.value as number)}
         &nbsp;pelo Pix
