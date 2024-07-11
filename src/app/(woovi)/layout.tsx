@@ -5,6 +5,8 @@ import { Logo } from "@/components/logo"
 
 import { SplashScreenProvider } from "@/providers/splash-screen-provider"
 
+import { BackToPaymentsOptions } from "./_components/back-to-payments-options"
+
 interface WooviLayoutProps {
   children: ReactNode
 }
@@ -12,7 +14,9 @@ interface WooviLayoutProps {
 export default function WooviLayout({ children }: WooviLayoutProps) {
   return (
     <SplashScreenProvider>
-      <div className="flex flex-col items-center gap-8 px-4 py-8">
+      <div className="relative flex flex-col items-center gap-8 px-4 py-8">
+        <BackToPaymentsOptions />
+
         <header>
           <Logo.Colored className="h-9 w-28" />
         </header>
