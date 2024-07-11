@@ -2,15 +2,14 @@ import { Metadata, Viewport } from "next"
 import { ReactNode } from "react"
 
 import { ScreenSizeIndicator } from "@/components/screen-size-indicator"
+import { Toaster } from "@/components/ui/toaster"
 
 import { siteConfig } from "@/config/config"
 
 import { cn } from "@/lib/utils"
 
-import { fontCalSans, fontMono, fontNunito, fontSans } from "@/styles/fonts"
+import { fontNunito } from "@/styles/fonts"
 import "@/styles/global.css"
-
-import { ThemeProvider } from "@/providers/theme-provider"
 
 export const viewport: Viewport = {
   themeColor: [
@@ -34,19 +33,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html suppressHydrationWarning>
       <head />
-      <body
-        className={cn(
-          "min-h-screen",
-          fontSans,
-          fontMono,
-          fontCalSans,
-          fontNunito
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+      <body className={cn("min-h-screen", fontNunito)}>
+        {children}
         <ScreenSizeIndicator />
+        <Toaster />
       </body>
     </html>
   )
