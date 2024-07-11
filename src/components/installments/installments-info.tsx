@@ -1,5 +1,7 @@
 "use client"
 
+import { usePathname } from "next/navigation"
+
 import {
   Accordion,
   AccordionContent,
@@ -14,8 +16,11 @@ import { usePaymentMethod } from "@/stores/use-payments"
 import useStore from "@/stores/use-store"
 import { formatCurrency } from "@/utils/format-currency"
 
+import { Check } from "lucide-react"
+
 export const InstallmentsInfo = () => {
   const paymentMethodStore = useStore(usePaymentMethod, (state) => state)
+  const pathname = usePathname()
 
   const quantity = paymentMethodStore?.paymentMethod?.quantity as number
   const value = paymentMethodStore?.paymentMethod?.value as number
@@ -23,7 +28,7 @@ export const InstallmentsInfo = () => {
   const total = paymentMethodStore?.paymentMethod?.total as number
   const identifierCode = paymentMethodStore?.paymentMethod
     ?.identifier_code as string
-
+  console.log(pathname.includes("/payment"))
   return (
     <div className="mt-4 flex w-full flex-col">
       <div className="flex w-full flex-col gap-4">
@@ -32,15 +37,25 @@ export const InstallmentsInfo = () => {
             <div className="flex items-center gap-2">
               <div
                 className={cn(
-                  "relative size-4 rounded-full border-2 bg-white",
+                  "relative flex size-4 items-center justify-center rounded-full border-2 bg-white",
+                  pathname.includes("/payment") &&
+                    index === 0 &&
+                    "bg-woovi-green",
                   index === 0 && "border-woovi-green"
                 )}
               >
                 <div className="absolute inset-x-1/2 -bottom-8 -z-10 h-10 w-0.5 -translate-x-1/2 bg-woovi-light-gray group-last-of-type:hidden" />
+
+                <Check
+                  className={cn(
+                    "size-3 stroke-2 text-white",
+                    !pathname.includes("/payment") && index === 0 && "hidden"
+                  )}
+                />
               </div>
 
               <span className="text-lg font-semibold text-woovi-dark-gray">
-                {index + 1}ª {index === 0 ? "entrada no pix" : "no cartão"}
+                {index + 1}ª {index === 0 ? "entrada no Pix" : "no cartão"}
               </span>
             </div>
 

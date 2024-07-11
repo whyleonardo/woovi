@@ -1,9 +1,9 @@
 import Image from "next/image"
 
+import { InstallmentsInfo } from "@/components/installments"
 import { MotionWrapper } from "@/components/motion-wrapper"
 
 import { CopyQRCodeButton } from "./_components/copy-qrcode-button"
-import { InstallmentsInfo } from "./_components/installments-info"
 import { InstallmentsOptionNextStep } from "./_components/installments-option-next-step"
 import { PageHeading } from "./_components/page-heading"
 import { PaymentTerm } from "./_components/payment-term"
