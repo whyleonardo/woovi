@@ -7,7 +7,6 @@ const {
 } = require("tailwindcss/lib/util/flattenColorPalette")
 
 const config = {
-  darkMode: ["class"],
   content: { files: ["./src/**/*.{ts,tsx}"], extract },
   theme: {
     container: {
@@ -73,6 +72,14 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
+        },
+        woovi: {
+          green: { DEFAULT: "#03D69D", foreground: "#F4FBF9" },
+          blue: "#133A6F",
+          muted: "#AFAFAF",
+          "dark-gray": "#4D4D4D",
+          "light-gray": "#E5E5E5",
+          "muted-gray": "#B2B2B2"
         }
       },
       borderRadius: {
