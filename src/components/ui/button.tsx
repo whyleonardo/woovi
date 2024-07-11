@@ -26,13 +26,16 @@ const buttonVariants = cva(
         ringHover:
           "bg-primary hover:bg-primary/90 transition-all text-primary-foreground hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-primary duration-300",
         linkHover:
-          "relative after:absolute after:bg-primary after:bottom-2 after:h-[1px] after:w-7/12 after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
+          "relative after:absolute after:bg-primary after:bottom-2 after:h-[1px] after:w-7/12 after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300",
+        woovi:
+          "bg-woovi-blue hover:opacity-80 text-white !text-lg font-semibold"
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
-        icon: "size-8"
+        icon: "size-8",
+        woovi: "h-10 rounded-[8px] px-5"
       }
     },
     defaultVariants: {
