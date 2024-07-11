@@ -14,7 +14,7 @@
   }
 
   body {
-    @apply bg-background font-sans tracking-tighter text-foreground;
+    @apply bg-background font-nunito tracking-tighter text-foreground;
   }
 
   a,
@@ -29,18 +29,6 @@
   .icon {
     @apply h-6 w-6;
   }
-}
-
-::-moz-selection {
-  /* Code for Firefox */
-  color: hsl(var(--accent-foreground));
-  background: hsl(var(--accent));
-}
-
-::selection {
-  color: hsl(var(--accent));
-  background: hsl(var(--accent-foreground));
-  border-radius: 1rem;
 }
 
 @layer base {
