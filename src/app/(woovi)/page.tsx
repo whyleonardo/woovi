@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { MotionWrapper } from "@/components/motion-wrapper"
 import { PaymentOption, PaymentRoot } from "@/components/payment"
+import { buttonVariants } from "@/components/ui/button"
 
 import { mockedData } from "@/data/mock"
 
@@ -44,8 +45,15 @@ export default function PaymentOptionsPage() {
         </div>
       </PaymentRoot>
 
-      <Link href="/installments-info" className="mt-8">
-        PIX
+      <Link
+        href="/installments-info"
+        className={buttonVariants({
+          className: "mt-8 w-full",
+          variant: "woovi",
+          size: "woovi"
+        })}
+      >
+        Pagar com Pix
       </Link>
     </MotionWrapper>
   )

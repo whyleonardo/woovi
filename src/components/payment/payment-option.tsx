@@ -68,12 +68,18 @@ export const PaymentOption = ({
             {formatCurrency(value)}
           </span>
         </div>
-
-        <div>
-          <span className="text-base font-semibold text-woovi-muted">
-            Total: {formatCurrency(total)}
+        {type === "pix" && (
+          <span className="font-semibold text-woovi-green">
+            Ganhe <strong className="extrabold">3%</strong> de Cashback
           </span>
-        </div>
+        )}
+        {type === "pix_parcelado" && (
+          <div>
+            <span className="text-base font-semibold text-woovi-muted">
+              Total: {formatCurrency(total)}
+            </span>
+          </div>
+        )}
 
         {banner_highlight && (
           <FlagBanner>
